@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profil</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif; }
+
+    body { background: #f4f4f4; color: #111; }
+
+    /* ================= NAVBAR ================= */
+    .navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: 56px;
+      background: #2d2fd6;
+      color: white;
+      display: flex;
+      align-items: center; /* FIX: vertical centering */
+      justify-content: space-between;
+      padding: 0 16px;
+      z-index: 1000;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center; /* FIX: burger alignment */
+      gap: 12px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .burger {
+      font-size: 22px;
+      line-height: 1; /* FIX: remove baseline offset */
+      cursor: pointer;
+    }
+
+    .nav-right {
+      display: none;
+      gap: 24px;
+      font-size: 13px;
+    }
+
+    .nav-right span { cursor: pointer; }
+
+    /* ================= PAGE ================= */
+    section {
+      min-height: calc(100vh - 56px); /* FIX: fit mobile in one screen */
+      padding-top: 56px;
+    }
+
+    /* ================= MOBILE LAYOUT ================= */
+    .container {
+      max-width: 360px; /* tighter to force one-page fit */
+      margin: 0 auto;
+      padding: 12px;
+      height: 100%;
+    }
+
+    .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 6px; /* tighter spacing */
+    }
+
+    .avatar {
+      width: 140px; /* reduced to fit one page */
+      height: 140px;
+      border-radius: 50%;
+      background: #dcdcdc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666;
+    }
+
+    .name { font-size: 15px; font-weight: bold; }
+    .date { font-size: 12px; color: #666; }
+    .status { font-size: 13px; margin-top: 2px; }
+
+    /* ================= PROJECTS ================= */
+    .projects-btn {
+      margin-top: 10px;
+      background: #2d2fd6;
+      color: white;
+      padding: 7px 16px;
+      font-size: 12px;
+      font-weight: bold;
+      border-radius: 3px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .projects-list {
+      margin-top: 8px;
+      width: 200px;
+      height: 100px;
+      background: #e2e2e2;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+    }
+
+    .projects-list.show { display: flex; }
+
+    .mobile-only { display: block; }
+    .desktop-only { display: none; }
+
+    /* ================= CONNECTIONS ================= */
+    .connections {
+      margin-top: 18px; /* pulled up to fit screen */
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .connection { text-align: center; font-size: 12px; }
+
+    .circle {
+      width: 100px; /* reduced */
+      height: 100px;
+      border-radius: 50%;
+      background: #dcdcdc;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666;
+    }
+
+    /* ================= DESKTOP ================= */
+    @media (min-width: 900px) {
+      section {
+        min-height: 100vh;
+        padding-top: 80px;
+      }
+
+      .container { max-width: 100%; padding: 0 60px; }
+
+      .nav-right { display: flex; }
+
+      .profile {
+        flex-direction: row;
+        text-align: left;
+        gap: 60px;
+        align-items: flex-start;
+      }
+
+      #page-connections {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .connections { gap: 220px; justify-content: center; }
+
+      .mobile-only { display: none; }
+        .desktop-only { display: block; }
+    }
+
+
+
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <div class="nav-left">
+      <div class="burger">☰</div>
+      <div>Tristan Bayeux</div>
+    </div>
+    <div class="nav-right">
+      <span>Account</span>
+      <span>Colleagues</span>
+      <span>Projects</span>
+    </div>
+  </div>
+
+  <!-- PAGE 1 -->
+  <section id="page-profile">
+    <div class="container">
+      <div class="profile">
+        <div class="avatar">Image</div>
+        <div class="name">Tristan Bayeux</div>
+        <div class="date">07/10/2007</div>
+        <div class="status">Étudiant de Aix-Marseille Université</div>
+        <div class="projects-btn" id="projectsBtn">MES PROJETS</div>
+        <div class="projects-list" id="projectsList">Liste des projets</div>
+        <div class="connections">
+          <div class="connection">
+            <div class="circle">Image</div>
+            <div>Robert Cocosila</div>
+          </div>
+          <div class="connection">
+            <div class="circle">Image</div>
+            <div>William Seiller</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAGE 2 (DESKTOP ONLY) -->
+  <section id="page-connections">
+    <div class="container">
+      <div class="connections">
+        <div class="connection">
+          <div class="circle">Image</div>
+          <div>Robert Cocosila</div>
+        </div>
+        <div class="connection">
+          <div class="circle">Image</div>
+          <div>William Seiller</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const btn = document.getElementById('projectsBtn');
+    const list = document.getElementById('projectsList');
+
+    btn.addEventListener('click', () => {
+      list.classList.toggle('show');
+    });
+  </script>
+
+</body>
+</html>

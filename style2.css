@@ -1,0 +1,183 @@
+/* ================= RESET ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================= GLOBAL ================= */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0f0f14;
+    color: #e6e6f0;
+}
+
+/* ================= NAVBAR ================= */
+
+.barre {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2C1DD2;
+    color: white;
+    padding: 1em 2em;
+}
+
+.gauche {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.m {
+    width: 32px;
+    height: 32px;
+}
+
+.menu {
+    display: flex;
+    gap: 2em;
+}
+
+.a {
+    color: white;
+    text-decoration: none;
+}
+
+/* ================= DESKTOP – UNE PAGE ================= */
+
+.blocP {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 4em 6em;
+}
+
+.blocG {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+.c {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.adh {
+    display: none;
+}
+
+.blocD {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    padding: 1em;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    color: #ffffff;
+}
+
+/* ================= IMAGES ================= */
+
+.photo {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background-color: #2a2a35;
+}
+
+/* ================= PROJETS ================= */
+
+.tp {
+    background-color: #2C1DD2;
+    color: white;
+    border: none;
+    padding: 0.6em 1.2em;
+    cursor: pointer;
+}
+
+.projet {
+    width: 160px;
+    height: 120px;
+    background-color: #2a2a35;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e6e6f0;
+    font-size: 0.8em;
+}
+
+/* ================= COLLEGUES ================= */
+
+.body2 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 60%;
+    gap: 2em;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 900px) {
+
+
+    .menu {
+        display: none;
+    }
+
+
+    .blocP {
+        flex-direction: column;
+        align-items: center;
+        padding: 2em 1em;
+        gap: 2em;
+    }
+
+
+    .blocG {
+        flex-direction: column;
+        text-align: center;
+        margin: 1em;
+    }
+
+
+    .photo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .body2 {
+        margin: 0%;
+        display: flex;
+        justify-content: baseline;
+    }
+
+    /* PAGE 2 : collègues côte à côte */
+    #page2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        /* ← LA LIGNE CLÉ */
+        gap: 2em;
+    }
+
+    #page2 .blocG {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        min-width: 135px;
+    }
+
+}

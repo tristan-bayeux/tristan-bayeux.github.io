@@ -1,0 +1,177 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+/* NAVBAR */
+
+.barre {
+    background-color: #2C1DD2;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+}
+
+.gauche {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.m {
+    width: 32px;
+}
+
+.menu {
+    display: flex;
+    gap: 2em;
+}
+
+.a {
+    color: white;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* STRUCTURE */
+
+.blocP {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 4em 6em;
+    padding-bottom: 35%;
+}
+
+.blocG {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+.c {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.blocD {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+.photo {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background-color: #ddd;
+}
+
+.tp {
+    background-color: #2C1DD2;
+    color: white;
+    border: none;
+    padding: 0.6em 1.2em;
+    cursor: pointer;
+}
+
+.adh {
+    display: none;
+}
+
+.projet {
+    width: 140px;
+    height: 100px;
+    background-color: #ddd;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    font-size: 0.8em;
+    padding: 2em;
+}
+
+/* PAGE 2 */
+
+.body2 {
+    background-color: #f4f4f4;
+    margin-top: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 35% 6em;
+}
+
+
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+
+    .menu {
+        display: none;
+    }
+
+
+    .blocP {
+        flex-direction: column;
+        align-items: center;
+        padding: 2em 1em;
+        gap: 2em;
+    }
+
+
+    .blocG {
+        flex-direction: column;
+        text-align: center;
+        margin: 1em;
+    }
+
+
+    .photo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .body2 {
+        padding: 0%;
+        background-color: #ffffff;
+        margin: 0%;
+        display: flex;
+        justify-content: baseline;
+    }
+
+    /* PAGE 2 : collègues côte à côte */
+    #page2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        /* ← LA LIGNE CLÉ */
+        gap: 2em;
+    }
+
+    #page2 .blocG {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        min-width: 135px;
+    }
+
+}
