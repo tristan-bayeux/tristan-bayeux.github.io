@@ -159,7 +159,6 @@ a {
     .body2 {
         margin: 0%;
         display: flex;
-        justify-content: baseline;
     }
 
     /* PAGE 2 : collègues côte à côte */
